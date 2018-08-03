@@ -1,8 +1,10 @@
 export { dark as theme } from 'mdx-deck/themes'
 import { Image } from 'mdx-deck'
+import { Notes } from 'mdx-deck'
 
+# EB and NGINX
+---
 <Image src='aws.png'></Image>
-
 ---
 
 ## Elastic Beanstalk
@@ -12,16 +14,33 @@ import { Image } from 'mdx-deck'
 
 ---
 
-## Setup
+### Setup
 ```jsx
 eb create <env_name>
 ```
+### Deployment
+```jsx
+eb delpoy
+```
+### Debugging
+```jsx
+eb ssh
+eb logs
+```
+
+---
+<Image src='nginxbg.png'></Image>
 
 ---
 
 ### NGINX 
 * Why NGINX
-* Read architecture
+* SSL Termination
+* Scalability
+* Security
+
+---
+<Image src='nginxarch.png' style={{ width: 800, height: 800}} ></Image>
 
 ---
 
@@ -32,11 +51,9 @@ eb create <env_name>
 ---
 
 ### AWS NGINX 
-```jsx
-Show sample nginx conf
-```
-* nginx to nodejs
-* eb extensions
+<a href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/nodejs-platform-proxy.html" 
+    target="_blank">Checkout AWS nginx conf</a>
+
 * client max body size
 * location directive
 
@@ -44,8 +61,9 @@ Show sample nginx conf
 
 ### Credits
 ```jsx
-Built with MDX
+Built with MDX Deck
 ```
+<div style={{ height: 20}}></div>
 
 ```jsx
 Deployed on now.sh
